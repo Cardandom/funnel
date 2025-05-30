@@ -6,6 +6,7 @@ import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
 import Diagnostic from "./components/Diagnostic";
 import Solution from "./components/Solution";
+import Bonos from "./components/Bonos";
 
 export default function Page() {
   return (
@@ -31,13 +32,20 @@ export default function Page() {
         }
       />
       <Solution />
-            <Hero
+      <Hero
         title1={""}
         title2={
           "No desaproveches tiempo, atrévete a emprender desde casa y seguir cuidando de tus hijos."
         }
       />
       <Benefits />
+      <Hero
+        title1={""}
+        title2={
+          "No desaproveches tiempo, atrévete a emprender desde casa y seguir cuidando de tus hijos."
+        }
+      />
+      <Bonos/>
       <Testimonials />
       <CallToAction />
       <Footer />
