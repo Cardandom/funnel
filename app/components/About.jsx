@@ -15,7 +15,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="py-10 bg-[url('/assets/bg_hero.webp')] bg-bottom bg-fixed bg-cover h-screen relative"
+      className="py-10 bg-[url('/assets/bg_hero.webp')] bg-bottom bg-fixed bg-cover min-h-screen relative"
     >
       <div className="absolute top-0 bg-slate-800/60 w-full h-full" />
       <motion.div
