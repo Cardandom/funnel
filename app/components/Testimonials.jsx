@@ -3,13 +3,19 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Ana Gómez",
+    name: "Carla, mamá de Joaquín (5 años, autismo)",
     feedback:
-      "Esta solución cambió mi vida. Ahora manejo el estrés mucho mejor.",
+      "Este libro me hizo llorar, porque sentí que alguien por fin entendía lo que vivo. Y me dio fuerzas para volver a intentarlo con mi negocio.",
   },
   {
-    name: "Carlos Pérez",
-    feedback: "Recomiendo este programa a todos mis amigos. Es excelente.",
+    name: "Maribel, mamá emprendedora",
+    feedback:
+      "Emprender se volvió menos imposible. Aprendí a organizarme, a respetar mis tiempos y a no compararme más.",
+  },
+  {
+    name: "Paola, mamá de Lucas",
+    feedback:
+      "El recetario sensorial del bonus 6 cambió mis días. ¡Mi hijo ahora prueba nuevas comidas sin llorar!",
   },
 ];
 

@@ -11,7 +11,7 @@ const benefits = [
 
 export default function BenefitsSection() {
   return (
-    <section className="bg-gray-100 py-10 px-4">
+    <section className="bg-gray-100 py-14 px-4">
       <motion.h2
         className="text-xl sm:text-2xl w-fit lg:text-3xl font-bold mx-auto mb-6 text-center bg-gradient-to-b from-secondary to-blue-700 text-white px-6 py-3 rounded-full my-5 uppercase"
         transition={{duration: 0.5}}
@@ -19,7 +19,7 @@ export default function BenefitsSection() {
         ¿Qué vas a lograr con la adquisición de este libro?
       </motion.h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-5">
         {benefits.map((benefit, index) => (
           <motion.div
             key={index}
@@ -28,7 +28,7 @@ export default function BenefitsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 }}
           >
-            <p className="text-center font-semibold">{benefit}</p>
+            <p className="text-center font-semibold text-lg">{benefit}</p>
           </motion.div>
         ))}
       </div>
