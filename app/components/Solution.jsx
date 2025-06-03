@@ -21,21 +21,30 @@ const Solution = () => {
             Este no es otro Ebook que te llenará de teoría imposible de aplicar.
           </p>
           <p className="my-5 text-base font-semibold sm:text-lg">
-            <span className="text-secondary text-bold uppercase">“Emprendiendo con un hijo autista”</span> es un ebook creado desde la
-            experiencia real, con herramientas emocionales y estrategias
-            prácticas para que puedas:
+            <span className="text-secondary text-bold uppercase">
+              “Emprendiendo con un hijo autista”
+            </span>{" "}
+            es un ebook creado desde la experiencia real, con herramientas
+            emocionales y estrategias prácticas para que puedas:
           </p>
           <ul className="space-y-4 text-base font-semibold sm:text-lg">
             <li>💡 Crear un emprendimiento que se adapte a tu ritmo.</li>
             <li>❤️ Sanar tus emociones sin culpas,</li>
             <li>
-              🚀 Avanzar, paso a paso, sin dejar de ser la madre presente que
-              tu hijo necesita.
+              🚀 Avanzar, paso a paso, sin dejar de ser la madre presente que tu
+              hijo necesita.
             </li>
           </ul>
           <p className="my-5 text-base font-semibold sm:text-lg">
             No es teoría. Es vida real. Es para ti.
           </p>
+          <motion.a
+            href=""
+            whileHover={{ scale: 1.05 }}
+            className="inline-block bg-gradient-to-b from-red-700 to-red-500 text-white text-center font-semibold md:text-md xl:text-xl px-6 py-3 rounded-full my-5 uppercase"
+          >
+            Quiero emprender exitosamente sin dejar de ser mamá
+          </motion.a>
         </motion.div>
 
         {/* Imagen */}

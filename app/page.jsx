@@ -32,12 +32,6 @@ export default function Page() {
         }
       />
       <Solution />
-      <Hero
-        title1={""}
-        title2={
-          "No desaproveches tiempo, atrévete a emprender desde casa y seguir cuidando de tus hijos."
-        }
-      />
       <Benefits />
       <Hero
         title1={""}

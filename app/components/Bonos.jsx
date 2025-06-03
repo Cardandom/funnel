@@ -80,11 +80,11 @@ export default function Bonos() {
       </div>
       <div className="flex justify-center z-10 relative mt-14">
         <motion.a
-          href="#about"
+          href=""
           whileHover={{ scale: 1.05 }}
-          className="inline-block bg-gradient-to-b from-secondary to-blue-700 text-white font-semibold md:text-xl xl:text-3xl px-6 py-3 rounded-full uppercase"
+          className="inline-block bg-gradient-to-b from-red-700 to-red-500 text-white text-center font-semibold md:text-md xl:text-xl px-6 py-3 rounded-full my-5 uppercase"
         >
-          Toca aquí y accede al método ya mismo
+          Quiero los libros + Bonos ahora.
         </motion.a>
       </div>
     </section>
