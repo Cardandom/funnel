@@ -6,33 +6,33 @@ const bonuses = [
   {
     icon: "🧠",
     title: "Bonus 1 – Guía emocional para mamás cuidadoras",
-    image: "/assets/libros_muestra.png",
+    image: "/assets/bono1.png",
   },
   {
     icon: "💼",
     title: "Bonus 2 – Ideas de negocios flexibles y desde casa",
-    image: "/assets/libros_muestra.png",
+    image: "/assets/bono2.png",
   },
   {
     icon: "🧘‍♀️",
     title: "Bonus 3 – Mini curso de autocuidado realista",
-    image: "/assets/libros_muestra.png",
+    image: "/assets/bono3.png",
   },
   {
     icon: "📲",
     title: "Bonus 4 – Taller exprés de organización y rutinas",
-    image: "/assets/libros_muestra.png",
+    image: "/assets/bono4.png",
   },
   {
     icon: "📱",
     title: "Bonus 5 – Aprende WhatsApp Business para vender sin complicaciones",
-    image: "/assets/libros_muestra.png",
+    image: "/assets/bono5.png",
   },
   {
     icon: "🍽️",
     title:
       "Bonus 6 – Recetario sensorial para mejorar la hora de la comida con tu hijo",
-    image: "/assets/libros_muestra.png",
+    image: "/assets/bono6.png",
   },
 ];
 
@@ -59,17 +59,17 @@ export default function Bonos() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
+              className="rounded-xl shadow-lg overflow-hidden flex flex-col"
             >
-              <div className="w-full h-48 relative">
+              <div className="w-full h-96 relative">
                 <Image
                   src={bonus.image}
                   alt={bonus.title}
                   fill
-                  className="object-cover"
+                  className="object-contain object-center"
                 />
               </div>
-              <div className="p-5 text-center">
+              <div className="p-5 text-center text-white">
                 <p className="text-base sm:text-lg font-medium">
                   {bonus.icon} {bonus.title}
                 </p>

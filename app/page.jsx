@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Diagnostic from "./components/Diagnostic";
 import Solution from "./components/Solution";
 import Bonos from "./components/Bonos";
+import Offer from "./components/Offer";
 
 export default function Page() {
   return (
@@ -19,29 +20,24 @@ export default function Page() {
       />
       <About />
       <Hero
-        title1={""}
-        title2={
-          "Imagina poder ganar dinero desde casa y llevar a tu hijo a sus actividades y terapias, tener tiempo para el y para ti, que el trabajo no sea un impedimento"
-        }
+        title1={"Imagina poder ganar dinero desde casa y llevar a tu hijo a sus actividades y terapias, tener tiempo para el y para ti, que el trabajo no sea un impedimento"}
+        title2={""}
       />
       <Diagnostic />
       <Hero
-        title1={""}
-        title2={
-          "Imagina poder ganar dinero desde casa y llevar a tu hijo a sus actividades y terapias, tener tiempo para el y para ti, que el trabajo no sea un impedimento"
-        }
+        title1={"Imagina poder ganar dinero desde casa y llevar a tu hijo a sus actividades y terapias, tener tiempo para el y para ti, que el trabajo no sea un impedimento"}
+        title2={""}
       />
       <Solution />
       <Benefits />
       <Hero
-        title1={""}
-        title2={
-          "No desaproveches tiempo, atrévete a emprender desde casa y seguir cuidando de tus hijos."
-        }
+        title1={"No desaproveches tiempo, atrévete a emprender desde casa y seguir cuidando de tus hijos."}
+        title2={""}
       />
       <Bonos/>
       <Testimonials />
       <CallToAction />
+      <Offer/>
       <Footer />
     </>
   );

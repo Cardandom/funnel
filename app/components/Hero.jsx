@@ -10,10 +10,10 @@ const Hero = ({title1, title2}) => {
         transition={{ duration: 0.6 }}
         className="max-w-5xl mx-auto px-4 text-center"
       >
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
           {title1}
         </h1>
-        <p className="text-base sm:text-lg md:text-xl mb-6">
+        <p className="text-base sm:text-xl md:text-2xl mb-6">
           {title2}
         </p>
       </motion.div>

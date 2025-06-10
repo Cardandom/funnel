@@ -17,6 +17,11 @@ const testimonials = [
     feedback:
       "El recetario sensorial del bonus 6 cambió mis días. ¡Mi hijo ahora prueba nuevas comidas sin llorar!",
   },
+    {
+    name: "Ana María, mamá de Jerónimo",
+    feedback:
+      "Este material realmente me ha dado mucho ánimo y he dejado de sentir que estoy sola en este proceso, realmente somos muchas mamitas guerreando junto a nuestros tesoros que ayudaremos a salir adelante",
+  },
 ];
 
 export default function TestimonialsSection() {
