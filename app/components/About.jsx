@@ -42,6 +42,14 @@ export default function AboutSection() {
         </p>
         <motion.a
           href="#about"
+          initial={{ y: 0 }}
+          whileInView={{ y: [0, -40, 0, -20, 0, -10, 0] }}
+          transition={{
+            duration: 1.5,
+            ease: "easeOut",
+            times: [0, 0.2, 0.4, 0.6, 0.75, 0.9, 1],
+          }}
+          viewport={{ once: true }}
           whileHover={{ scale: 1.05 }}
           className="inline-block bg-gradient-to-b from-secondary to-blue-700 text-white font-semibold md:text-xl xl:text-3xl px-6 py-3 rounded-full my-5 uppercase"
         >
