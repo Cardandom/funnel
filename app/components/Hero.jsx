@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Hero = ({title1, title2}) => {
   return (
-    <section className="bg-gradient-to-b from-primary to-terciary text-slate-800 py-5">
+    <section className="bg-gradient-to-b from-primary to-terciary text-black py-5">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

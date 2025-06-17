@@ -8,6 +8,7 @@ import Diagnostic from "./components/Diagnostic";
 import Solution from "./components/Solution";
 import Bonos from "./components/Bonos";
 import Offer from "./components/Offer";
+import Questions from "./components/Questions";
 
 export default function Page() {
   return (
@@ -38,6 +39,7 @@ export default function Page() {
       <Testimonials />
       <CallToAction />
       <Offer/>
+      <Questions/>
       <Footer />
     </>
   );
