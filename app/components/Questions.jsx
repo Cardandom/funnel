@@ -44,7 +44,7 @@ const Questions = () => {
   };
 
   return (
-    <section className="py-10 px-4 bg-white text-gray-800">
+    <section className="py-10 px-4 bg-[url('/assets/bg_white.jpeg')] bg-bottom bg-fixed bg-cover text-gray-800">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8">
         Preguntas frecuentes
       </h2>

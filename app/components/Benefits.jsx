@@ -11,7 +11,7 @@ const benefits = [
 
 export default function BenefitsSection() {
   return (
-    <section className="bg-gray-100 py-14 px-4">
+    <section className="bg-[url('/assets/bg_white.jpeg')] bg-bottom bg-fixed bg-cover py-14 px-4">
       <motion.h2
         className="text-xl sm:text-2xl w-fit lg:text-3xl font-bold mx-auto mb-6 text-center bg-gradient-to-b from-secondary to-blue-700 text-white px-6 py-3 rounded-full my-5 uppercase"
         transition={{duration: 0.5}}

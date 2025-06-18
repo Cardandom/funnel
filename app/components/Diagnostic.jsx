@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Diagnostic = () => {
   return (
-    <section className="py-20 px-4 bg-white text-slate-800">
+    <section className="py-20 px-4 bg-[url('/assets/bg_white.jpeg')] bg-bottom bg-fixed bg-cover text-slate-800">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Texto */}
         <motion.div

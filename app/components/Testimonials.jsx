@@ -26,7 +26,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 bg-white px-4">
+    <section className="py-20 bg-[url('/assets/bg_white.jpeg')] bg-bottom bg-fixed bg-cover px-4">
       <motion.h2
         className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-12"
         initial={{ opacity: 0, y: 50 }}
