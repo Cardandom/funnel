@@ -13,7 +13,7 @@ const Hero = ({title1, title2}) => {
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
           {title1}
         </h1>
-        <p className="text-base sm:text-xl md:text-2xl mb-6">
+        <p className="font-medium sm:text-2xl md:text-3xl mb-6">
           {title2}
         </p>
       </motion.div>

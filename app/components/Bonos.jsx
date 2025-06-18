@@ -5,22 +5,22 @@ import Image from "next/image";
 const bonuses = [
   {
     icon: "🧠",
-    title: "Bonus 1 – Guía emocional para mamás cuidadoras",
-    image: "/assets/bono1.png",
+    title: "Bonus 1 – Pictograma para casa y emociones.",
+    image: "/assets/bono4.png",
   },
   {
     icon: "💼",
-    title: "Bonus 2 – Ideas de negocios flexibles y desde casa",
+    title: "Bonus 2 – Lista para emprender desde casa",
     image: "/assets/bono2.png",
   },
   {
     icon: "🧘‍♀️",
-    title: "Bonus 3 – Mini curso de autocuidado realista",
+    title: "Bonus 3 – Planificador Semanal de Rutinas para mamás emprendedoras con hijos autistas",
     image: "/assets/bono3.png",
   },
   {
     icon: "📲",
-    title: "Bonus 4 – Taller exprés de organización y rutinas",
+    title: "Bonus 4 – Audios y escritos de meditación para tiempos difíciles",
     image: "/assets/bono4.png",
   },
   {
@@ -31,7 +31,7 @@ const bonuses = [
   {
     icon: "🍽️",
     title:
-      "Bonus 6 – Recetario sensorial para mejorar la hora de la comida con tu hijo",
+      "Bonus 6 – Recetario de comidas sensoriales",
     image: "/assets/bono6.png",
   },
 ];
