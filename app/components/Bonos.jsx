@@ -20,8 +20,8 @@ const bonuses = [
   },
   {
     icon: "📲",
-    title: "Bonus 4 – Audios y escritos de meditación para tiempos difíciles",
-    image: "/assets/bono4.png",
+    title: "Bonus 4 – Audios y escritos de bienestar y meditación en tiempos dificiles",
+    image: "/assets/bono6.png",
   },
   {
     icon: "📱",
@@ -32,7 +32,7 @@ const bonuses = [
     icon: "🍽️",
     title:
       "Bonus 6 – Recetario de comidas sensoriales",
-    image: "/assets/bono6.png",
+    image: "/assets/bonus6.png",
   },
 ];
 
