@@ -8,7 +8,7 @@ const faqs = [
   {
     question: "¿El libro es físico o digital?",
     answer:
-      "El ebook Vence al Estrés Domina tu Mente y Recupera el Control es digital y viene en formato PDF. Este puede ser descargado desde cualquier dispositivo, celular, computadora o tablet. No se encuentra en ninguna tienda física.",
+      "El ebook emprendiendo con un hijo autista es digital y viene en formato PDF. Este puede ser descargado desde cualquier dispositivo, celular, computadora o tablet. No se encuentra en ninguna tienda física.",
   },
   {
     question: "¿Cómo descargo el libro y los bonos después de haber comprado?",
@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "Si tengo algún inconveniente, ¿Dónde puedo escribir?",
     answer:
-      "Puedes escribirnos al correo electrónico eduvirtualatam.com y allí resolveremos tus dudas o preguntas que tengas con la compra del ebook a la mayor brevedad posible.",
+      "Puedes escribirnos al correo electrónico autismoconsentido@gmail.com y allí resolveremos tus dudas o preguntas que tengas con la compra del ebook a la mayor brevedad posible.",
   },
   {
     question: "¿Es seguro pagar en línea?",
