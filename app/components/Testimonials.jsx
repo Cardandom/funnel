@@ -26,9 +26,10 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 bg-[url('/assets/bg_white.jpeg')] bg-bottom bg-fixed bg-cover px-4">
+    <section className="py-20 bg-[url('/assets/bg_white.jpeg')] bg-bottom bg-fixed bg-cover px-4 relative">
+      <div className="absolute top-0 bg-white/10 w-full h-full" />
       <motion.h2
-        className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-12"
+        className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-12 z-10 relative"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -36,7 +37,7 @@ export default function TestimonialsSection() {
         Testimonios
       </motion.h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 z-10 relative">
         {testimonials.map((testimonial, index) => (
           <motion.div
             key={index}
