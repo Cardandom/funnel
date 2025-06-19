@@ -16,7 +16,7 @@ const Diagnostic = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-center bg-gradient-to-b from-secondary to-blue-700 text-white md:text-xl xl:text-3xl px-6 py-3 rounded-full my-5 uppercase">
             ¿Te identificas con esto?
           </h2>
-          <ul className="space-y-4 text-base font-semibold sm:text-lg">
+          <ul className="space-y-4 font-semibold text-base sm:text-lg md:text-xl">
             <li>✔️ Te sientes culpable por no generar ingresos mientras crías a tu hijo con autismo.</li>
             <li>✔️ Estás agotada física y emocionalmente, y piensas que no tienes tiempo para hacer otra cosa.</li>
             <li>✔️ Has intentado emprender, pero siempre hay una crisis, una terapia, una regresión…</li>

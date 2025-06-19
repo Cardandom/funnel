@@ -14,25 +14,14 @@ const bonuses = [
     image: "/assets/bono2.png",
   },
   {
-    icon: "🧘‍♀️",
-    title: "Bonus 3 – Planificador Semanal de Rutinas para mamás emprendedoras con hijos autistas",
-    image: "/assets/bono3.png",
-  },
-  {
     icon: "📲",
-    title: "Bonus 4 – Audios y escritos de bienestar y meditación en tiempos dificiles",
+    title: "Bonus 3 – Audios y escritos de bienestar y meditación en tiempos dificiles",
     image: "/assets/bono6.png",
   },
   {
     icon: "📱",
-    title: "Bonus 5 – Aprende WhatsApp Business para vender sin complicaciones",
+    title: "Bonus 4 – Aprende WhatsApp Business para vender sin complicaciones",
     image: "/assets/bono5.png",
-  },
-  {
-    icon: "🍽️",
-    title:
-      "Bonus 6 – Recetario de comidas sensoriales",
-    image: "/assets/bonus6.png",
   },
 ];
 
@@ -48,11 +37,11 @@ export default function Bonos() {
           className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-12"
         >
           Además del ebook, recibirás{" "}
-          <span className="text-terciary">GRATIS</span> estos 6 bonos
+          <span className="text-terciary">GRATIS</span> estos 4 bonos
           exclusivos:
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-slate-900">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 text-slate-900">
           {bonuses.map((bonus, index) => (
             <motion.div
               key={index}
