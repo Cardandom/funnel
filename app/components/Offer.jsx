@@ -1,4 +1,7 @@
-import React from "react";
+"use client"
+
+
+import { motion } from "framer-motion";
 
 const Offer = () => {
   return (
@@ -27,58 +30,85 @@ const Offer = () => {
       <div className="w-full max-w-xl bg-white shadow-lg rounded-lg p-6 mb-8">
         {[
           {
-            plan: "BONO 1",
+            plan: "LIBRO DIGITAL",
+            price: "$27.90",
+            desc: "Emprendiendo con un hijo autista",
+          },
+          {
+            plan: "Bono 1",
             price: "$19.90",
-            desc: "Acceso a plantillas exclusivas",
+            desc: "Pictograma para casa y emociones",
           },
           {
-            plan: "BONO 2",
-            price: "$24.00",
-            desc: "Estrategias de marketing avanzadas",
+            plan: "Bono 2",
+            price: "$16.90",
+            desc: "Lista para emprender desde casa",
           },
           {
-            plan: "BONO 3",
-            price: "$15.00",
-            desc: "Checklist para lanzamientos",
+            plan: "Bono 3",
+            price: "$15.90",
+            desc: "Audios y escritos de bienestar y meditación en tiempos dificiles",
           },
-          { plan: "BONO 4", price: "$23.00", desc: "Acceso a grupo privado" },
+          {
+            plan: "Bono 4",
+            price: "$14.90",
+            desc: "Aprende WhatsApp Business para vender sin complicaciones",
+          },
         ].map(({ plan, price, desc }, idx) => (
           <div key={idx} className="border-b last:border-none pb-4 mb-4">
             <div className="flex justify-between items-center text-left">
               <span className="font-bold text-gray-700">{plan}</span>
-              <span className="text-red-600 font-semibold">{price}</span>
+              <span className="relative text-red-600 font-semibold">
+                {price}
+                <span className="absolute left-0 top-1/2 w-full h-[2px] bg-red-600 transform -translate-y-1/2"></span>
+              </span>
             </div>
-            <p className="text-sm text-gray-600 mt-1">{desc}</p>
+            <p className="text-sm text-gray-700 mt-1">{desc}</p>
           </div>
         ))}
 
         <div className="flex justify-between font-bold text-lg mt-6">
           <span>Total en valor:</span>
-          <span className="text-red-600">$81.90</span>
+          <span className="text-red-600">$95.50</span>
         </div>
       </div>
 
       {/* Texto de oferta especial */}
       <p className="max-w-xl text-base md:text-lg text-gray-700 mb-6">
-        El valor real del EBOOK MÁS LOS BONOS supera los $80, pero puedes
-        obtener hoy sin costo adicional el Ebook + LOS BONOS como parte de esta
-        oferta especial DE HOY.
+        El valor real del{" "}
+        <span className="text-green-600 font-bold">EBOOK MÁS LOS BONOS</span>{" "}
+        supera los <span className="text-green-600 font-bold">$80 USD</span>,
+        pero puedes obtener hoy{" "}
+        <span className="text-red-600 font-bold">SIN COSTO ADICIONAL</span> el
+        Ebook + LOS BONOS como parte de esta oferta especial{" "}
+        <span className="text-green-600 font-bold">DE HOY</span>
       </p>
 
       {/* Precio final */}
       <div className="text-center mb-8">
-        <p className="text-lg md:text-xl font-semibold text-gray-700 line-through">
-          Antes $81.90
+        <p className="text-lg md:text-xl font-semibold text-green-600 line-through">
+          Antes $95.50
         </p>
-        <p className="text-3xl md:text-4xl font-bold text-green-600">
+        <p className="text-3xl md:text-4xl font-bold text-red-600">
           HOY $10.90
         </p>
       </div>
 
       {/* Botón final */}
-      <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg">
+      <motion.button
+        className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg cursor-pointer"
+        initial={{ y: 0 }}
+        whileInView={{ y: [0, -40, 0, -20, 0, -10, 0] }}
+        transition={{
+          duration: 1.5,
+          ease: "easeOut",
+          times: [0, 0.2, 0.4, 0.6, 0.75, 0.9, 1],
+        }}
+        viewport={{ once: true }}
+        whileHover={{ scale: 1.05 }}
+      >
         Toca aquí y accede al método ya mismo
-      </button>
+      </motion.button>
     </section>
   );
 };
