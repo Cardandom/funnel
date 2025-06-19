@@ -44,11 +44,12 @@ const Questions = () => {
   };
 
   return (
-    <section className="py-10 px-4 bg-[url('/assets/bg_white.jpeg')] bg-bottom bg-fixed bg-cover text-gray-800">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8">
+    <section className="py-10 px-4 bg-[url('/assets/bg_white.jpeg')] bg-bottom bg-fixed bg-cover text-gray-800 relative">
+      <div className="absolute top-0 bg-white/10 w-full h-full" />
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 z-10 relative">
         Preguntas frecuentes
       </h2>
-      <div className="max-w-3xl mx-auto space-y-4">
+      <div className="max-w-3xl mx-auto space-y-4 z-10 relative">
         {faqs.map((item, i) => (
           <div key={i} className="border-b pb-4">
             <button
@@ -69,7 +70,7 @@ const Questions = () => {
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="overflow-hidden mt-2 text-base text-gray-600"
+                  className="overflow-hidden mt-2 text-base text-gray-600 bg-white"
                 >
                   <p>{item.answer}</p>
                 </motion.div>
