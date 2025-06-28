@@ -57,13 +57,13 @@ const Offer = () => {
         ].map(({ plan, price, desc }, idx) => (
           <div key={idx} className="border-b last:border-none pb-4 mb-4">
             <div className="flex justify-between items-center text-left">
-              <span className="font-bold text-gray-700">{plan}</span>
+              <span className="font-bold text-black uppercase">{plan}</span>
               <span className="relative text-red-600 font-semibold">
                 {price}
                 <span className="absolute left-0 top-1/2 w-full h-[2px] bg-red-600 transform -translate-y-1/2"></span>
               </span>
             </div>
-            <p className="text-sm text-gray-700 mt-1">{desc}</p>
+            <p className="text-gray-700 font-semibold mt-1">{desc}</p>
           </div>
         ))}
 
@@ -74,7 +74,7 @@ const Offer = () => {
       </div>
 
       {/* Texto de oferta especial */}
-      <p className="max-w-xl text-base md:text-lg text-gray-700 mb-6">
+      <p className="max-w-2/3 text-xl md:text-3xl text-gray-700 my-10 font-semibold">
         El valor real del{" "}
         <span className="text-green-600 font-bold">EBOOK MÁS LOS BONOS</span>{" "}
         supera los <span className="text-green-600 font-bold">$80 USD</span>,
@@ -86,17 +86,17 @@ const Offer = () => {
 
       {/* Precio final */}
       <div className="text-center mb-8">
-        <p className="text-lg md:text-xl font-semibold text-green-600 line-through">
+        <p className="text-2xl md:text-3xl font-bold text-green-600 line-through">
           Antes $95.50
         </p>
-        <p className="text-3xl md:text-4xl font-bold text-red-600">
+        <p className="text-4xl md:text-5xl font-extrabold text-red-600">
           HOY $10.90
         </p>
       </div>
 
       {/* Botón final */}
       <motion.button
-        className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg cursor-pointer"
+        className="bg-green-500 uppercase hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg md:text-xl cursor-pointer"
         initial={{ y: 0 }}
         whileInView={{ y: [0, -40, 0, -20, 0, -10, 0] }}
         transition={{
