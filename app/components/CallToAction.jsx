@@ -14,7 +14,7 @@ export default function CallToActionSection() {
           ¿Listo para Transformar tu Vida?
         </h2>
         <motion.a
-          href="/checkout"
+          href="https://pay.hotmart.com/A100587077F?checkoutMode=10&bid=1751909085221"
           whileHover={{ scale: 1.05 }}
           className="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-full"
         >

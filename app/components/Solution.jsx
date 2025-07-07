@@ -39,7 +39,7 @@ const Solution = () => {
             No es teoría. Es vida real. Es para ti.
           </p>
           <motion.a
-            href=""
+            href="https://pay.hotmart.com/A100587077F?checkoutMode=10&bid=1751909085221"
             whileInView={{ y: [0, -40, 0, -20, 0, -10, 0] }}
             transition={{
               duration: 1.5,
