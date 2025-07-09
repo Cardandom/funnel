@@ -41,7 +41,7 @@ export default function AboutSection() {
           mientras cuidas, sanas y creces junto a tu hijo.
         </p>
         <motion.a
-          href="#about"
+          href="https://pay.hotmart.com/A100587077F?checkoutMode=10&bid=1751909085221"
           initial={{ y: 0 }}
           whileInView={{ y: [0, -40, 0, -20, 0, -10, 0] }}
           transition={{

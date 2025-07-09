@@ -1,5 +1,4 @@
-"use client"
-
+"use client";
 
 import { motion } from "framer-motion";
 
@@ -95,8 +94,11 @@ const Offer = () => {
       </div>
 
       {/* Botón final */}
-      <motion.button
-        className="bg-green-500 uppercase hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg md:text-xl cursor-pointer"
+      <motion.a
+        href="https://pay.hotmart.com/A100587077F?checkoutMode=10&bid=1751909085221"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-green-500 uppercase hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg md:text-xl cursor-pointer inline-block"
         initial={{ y: 0 }}
         whileInView={{ y: [0, -40, 0, -20, 0, -10, 0] }}
         transition={{
@@ -108,7 +110,7 @@ const Offer = () => {
         whileHover={{ scale: 1.05 }}
       >
         Toca aquí y accede al método ya mismo
-      </motion.button>
+      </motion.a>
     </section>
   );
 };

@@ -69,7 +69,7 @@ export default function Bonos() {
       </div>
       <div className="flex justify-center z-10 relative mt-14">
         <motion.a
-          href=""
+          href="https://pay.hotmart.com/A100587077F?checkoutMode=10&bid=1751909085221"
           whileInView={{ y: [0, -40, 0, -20, 0, -10, 0] }}
           transition={{
             duration: 1.5,
@@ -78,7 +78,7 @@ export default function Bonos() {
           }}
           viewport={{ once: true }}
           whileHover={{ scale: 1.05 }}
-          className="inline-block bg-gradient-to-b from-red-700 to-red-500 text-white text-center font-semibold md:text-md xl:text-xl px-6 py-3 rounded-full my-5 uppercase"
+          className="inline-block bg-gradient-to-b from-red-700 to-red-500 text-white text-center font-semibold md:text-lg xl:text-2xl px-6 py-3 rounded-full my-5 uppercase"
         >
           Quiero los libros + Bonos ahora.
         </motion.a>
