@@ -9,37 +9,31 @@ import Solution from "./components/Solution";
 import Bonos from "./components/Bonos";
 import Offer from "./components/Offer";
 import Questions from "./components/Questions";
+import {
+  HOTMART_CHECKOUT_URL,
+  PRODUCT_NAME,
+  PRODUCT_PRICE,
+} from "./lib/landingData";
 
 export default function Page() {
   return (
     <>
       <Hero
-        title1={"Emprendiendo con un hijo autista"}
-        title2={
-          "¿Cómo emprender cuando tu hijo necesita más atención que un trabajo a tiempo completo?"
-        }
+        title="Emprende desde casa a tu ritmo mientras acompañas a tu hijo dentro del espectro autista"
+        subtitle={`${PRODUCT_NAME} es un ebook digital para madres cuidadoras que quieren organizar sus ideas, recuperar confianza y empezar un emprendimiento realista sin abandonar el cuidado de su familia.`}
+        price={PRODUCT_PRICE}
+        ctaLabel="Quiero acceder al ebook"
+        ctaHref={HOTMART_CHECKOUT_URL}
       />
       <About />
-      <Hero
-        title1={"Imagina poder ganar dinero desde casa y llevar a tu hijo a sus actividades y terapias, tener tiempo para el y para ti, que el trabajo no sea un impedimento"}
-        title2={""}
-      />
       <Diagnostic />
-      <Hero
-        title1={"Imagina poder ganar dinero desde casa y llevar a tu hijo a sus actividades y terapias, tener tiempo para el y para ti, que el trabajo no sea un impedimento"}
-        title2={""}
-      />
       <Solution />
       <Benefits />
-      <Hero
-        title1={"No desaproveches tiempo, atrévete a emprender desde casa y seguir cuidando de tus hijos."}
-        title2={""}
-      />
-      <Bonos/>
+      <Bonos />
       <Testimonials />
+      <Offer />
+      <Questions />
       <CallToAction />
-      <Offer/>
-      <Questions/>
       <Footer />
     </>
   );

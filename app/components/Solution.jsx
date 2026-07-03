@@ -1,72 +1,77 @@
 "use client";
-import { motion } from "framer-motion";
+
 import Image from "next/image";
+import { motion } from "motion/react";
+import {
+  HOTMART_CHECKOUT_URL,
+  PRODUCT_NAME,
+  SOLUTION_POINTS,
+} from "../lib/landingData";
 
 const Solution = () => {
   return (
-    <section className="py-20 px-4 bg-[url('/assets/bg_hero.webp')] bg-bottom bg-fixed bg-cover min-h-screen relative text-white">
-      <div className="absolute top-0 left-0 bg-slate-800/60 w-full h-full" />
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 z-10 relative">
-        {/* Texto */}
+    <section className="relative bg-[url('/assets/bg_hero.webp')] bg-cover bg-center bg-scroll py-16 text-white md:bg-fixed">
+      <div className="absolute inset-0 bg-slate-800/65" />
+
+      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full md:w-1/2"
+          viewport={{ once: true, amount: 0.25 }}
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-center bg-gradient-to-b from-secondary to-blue-700 text-white md:text-xl xl:text-3xl px-6 py-3 rounded-full my-5 uppercase">
-            ¡La Solución Está Aquí!
+          <span className="inline-flex rounded-full bg-white/15 px-5 py-2 text-sm font-semibold text-secondary">
+            Qué encontrarás dentro del ebook
+          </span>
+
+          <h2 className="mt-5 text-3xl font-bold leading-tight sm:text-4xl">
+            {PRODUCT_NAME} te ayuda a pasar de la idea suelta a una ruta inicial
+            más clara.
           </h2>
-          <p className="my-5 text-base font-semibold sm:text-lg">
-            Este no es otro Ebook que te llenará de teoría imposible de aplicar.
+
+          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-100 sm:text-lg">
+            No es teoría para guardar en una carpeta. Es una guía pensada para
+            acompañarte con pasos simples, a tu ritmo y con herramientas que sí
+            puedas usar desde casa.
           </p>
-          <p className="my-5 text-base font-semibold sm:text-lg">
-            <span className="text-secondary text-bold uppercase">
-              “Emprendiendo con un hijo autista”
-            </span>{" "}
-            es un ebook creado desde la experiencia real, con herramientas
-            emocionales y estrategias prácticas para que puedas:
-          </p>
-          <ul className="space-y-4 text-base font-semibold sm:text-lg">
-            <li>💡 Crear un emprendimiento que se adapte a tu ritmo.</li>
-            <li>❤️ Sanar tus emociones sin culpas,</li>
-            <li>
-              🚀 Avanzar, paso a paso, sin dejar de ser la madre presente que tu
-              hijo necesita.
-            </li>
+
+          <ul className="mt-7 space-y-4 text-base leading-7 text-slate-100 sm:text-lg">
+            {SOLUTION_POINTS.map((point) => (
+              <li
+                key={point}
+                className="rounded-2xl border border-white/10 bg-white/10 p-4 shadow-lg backdrop-blur"
+              >
+                {point}
+              </li>
+            ))}
           </ul>
-          <p className="my-5 text-base font-semibold sm:text-lg">
-            No es teoría. Es vida real. Es para ti.
-          </p>
+
           <motion.a
-            href="https://pay.hotmart.com/A100587077F?checkoutMode=10&bid=1751909085221"
-            whileInView={{ y: [0, -40, 0, -20, 0, -10, 0] }}
-            transition={{
-              duration: 1.5,
-              ease: "easeOut",
-              times: [0, 0.2, 0.4, 0.6, 0.75, 0.9, 1],
-            }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.05 }}
-            className="inline-block bg-gradient-to-b from-red-700 to-red-500 text-white text-center font-semibold md:text-md xl:text-xl px-6 py-3 rounded-full my-5 uppercase"
+            href={HOTMART_CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="mt-7 inline-flex items-center justify-center rounded-full bg-gradient-to-b from-red-700 to-red-500 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-red-900/20 sm:text-base"
           >
-            Quiero emprender exitosamente sin dejar de ser mamá
+            Empezar con la guía
           </motion.a>
         </motion.div>
 
-        {/* Imagen */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 24 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full md:w-1/2"
+          viewport={{ once: true, amount: 0.25 }}
+          className="relative"
         >
+          <div className="absolute inset-0 rounded-[2rem] bg-secondary/20 blur-3xl" />
           <Image
             src="/assets/booksp.png"
-            alt="Mamá criando a hijo con autismo"
-            width={500}
-            height={300}
-            className="rounded-xl mx-auto w-72 sm:w-80 md:w-[300px] lg:w-[450px]  lg:h-[400px] inset-0"
+            alt={`Portada de ${PRODUCT_NAME}`}
+            width={900}
+            height={900}
+            className="relative mx-auto h-auto w-full max-w-md rounded-[2rem] shadow-2xl"
           />
         </motion.div>
       </div>
