@@ -12,7 +12,7 @@ export default function Bonos() {
     >
       <div className="absolute inset-0 bg-slate-800/65" />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-4 text-white">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 text-white">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

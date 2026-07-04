@@ -8,7 +8,7 @@ export default function BenefitsSection() {
     <section className="relative bg-[url('/assets/bg_white.jpeg')] bg-cover bg-center bg-scroll py-16 px-4 md:bg-fixed">
       <div className="absolute inset-0 bg-white/15" />
 
-      <div className="relative z-10 mx-auto max-w-6xl">
+      <div className="relative z-10 mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

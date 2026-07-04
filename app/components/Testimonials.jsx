@@ -9,7 +9,7 @@ export default function TestimonialsSection() {
       <div className="absolute inset-0 bg-white/15" />
 
       <motion.div
-        className="relative z-10 mx-auto max-w-6xl"
+        className="relative z-10 mx-auto max-w-7xl"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

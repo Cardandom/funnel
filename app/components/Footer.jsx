@@ -4,7 +4,7 @@ import { SUPPORT_EMAIL } from "../lib/landingData";
 export default function FooterSection() {
   return (
     <footer className="border-t border-slate-200 bg-slate-900 px-4 py-8 text-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-7xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="space-y-2 text-sm text-slate-300">
           <p className="font-semibold text-white">Autismo con Sentido</p>
           <p>
@@ -27,7 +27,7 @@ export default function FooterSection() {
         </nav>
       </div>
 
-      <div className="mx-auto mt-6 max-w-6xl border-t border-white/10 pt-5 text-xs text-slate-400">
+      <div className="mx-auto mt-6 max-w-7xl border-t border-white/10 pt-5 text-xs text-slate-400">
         &copy; {new Date().getFullYear()} Autismo con Sentido. Todos los derechos reservados.
       </div>
     </footer>

@@ -13,7 +13,7 @@ export default function AboutSection() {
       <div className="absolute inset-0 bg-slate-800/65" />
 
       <motion.div
-        className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-[0.9fr_1.1fr]"
+        className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 lg:grid-cols-[0.9fr_1.1fr]"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -24,8 +24,8 @@ export default function AboutSection() {
             <Image
               src="/assets/booksp.png"
               alt="Portada del ebook Emprendiendo con un hijo Autista"
-              width={900}
-              height={900}
+              width={1200}
+              height={1200}
               className="h-auto w-full rounded-[1.5rem] object-contain"
             />
           </div>

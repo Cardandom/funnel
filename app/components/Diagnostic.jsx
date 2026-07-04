@@ -9,7 +9,7 @@ const Diagnostic = () => {
     <section className="relative bg-[url('/assets/bg_white.jpeg')] bg-cover bg-center bg-scroll py-16 text-slate-800 md:bg-fixed">
       <div className="absolute inset-0 bg-white/20" />
 
-      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -48,7 +48,7 @@ const Diagnostic = () => {
           <Image
             src="/assets/frustation.webp"
             alt="Madre cuidadora organizando sus ideas para emprender desde casa"
-            width={900}
+            width={1000}
             height={1100}
             className="relative mx-auto h-auto w-full max-w-md rounded-[2rem] shadow-2xl"
           />

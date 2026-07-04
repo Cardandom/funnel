@@ -28,7 +28,7 @@ export default function Hero({
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55 }}
-        className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-[1.08fr_0.92fr]"
+        className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 lg:grid-cols-[1.08fr_0.92fr]"
       >
         <div className="text-center lg:text-left">
           <span className="inline-flex flex-wrap justify-center gap-2 rounded-full border border-slate-900/10 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700 shadow-sm sm:text-sm lg:justify-start">
@@ -98,8 +98,8 @@ export default function Hero({
             <Image
               src={imageSrc}
               alt={imageAlt}
-              width={900}
-              height={900}
+              width={1000}
+              height={1000}
               priority
               className="h-auto w-full rounded-[1.5rem] object-contain"
             />

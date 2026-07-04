@@ -17,7 +17,7 @@ const Offer = () => {
     >
       <div className="absolute inset-0 bg-slate-800/70" />
 
-      <div className="relative z-10 mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.9fr_1.1fr]">
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
