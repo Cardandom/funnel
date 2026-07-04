@@ -1,87 +1,90 @@
 "use client";
-import { motion } from "framer-motion";
-import Image from "next/image";
 
-const bonuses = [
-  {
-    icon: "🧠",
-    title: "Bonus 1 – Pictograma para casa y emociones.",
-    image: "/assets/bono4.png",
-  },
-  {
-    icon: "💼",
-    title: "Bonus 2 – Lista para emprender desde casa",
-    image: "/assets/bono2.png",
-  },
-  {
-    icon: "📲",
-    title: "Bonus 3 – Audios y escritos de bienestar y meditación en tiempos dificiles",
-    image: "/assets/bono6.png",
-  },
-  {
-    icon: "📱",
-    title: "Bonus 4 – Aprende WhatsApp Business para vender sin complicaciones",
-    image: "/assets/bono5.png",
-  },
-];
+import Image from "next/image";
+import { motion } from "motion/react";
+import { BONUSES, HOTMART_CHECKOUT_URL } from "../lib/landingData";
 
 export default function Bonos() {
   return (
-    <section className="py-10 bg-[url('/assets/bg_hero.webp')] bg-bottom bg-fixed bg-cover min-h-screen relative">
-      <div className="absolute top-0 bg-slate-800/60 w-full h-full" />
-      <div className="max-w-6xl mx-auto px-4 z-10 relative text-white">
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
+    <section
+      id="bonos"
+      className="relative bg-[url('/assets/bg_hero.webp')] bg-cover bg-center bg-scroll py-16 md:bg-fixed"
+    >
+      <div className="absolute inset-0 bg-slate-800/65" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-12"
+          viewport={{ once: true, amount: 0.25 }}
+          className="mx-auto max-w-3xl text-center"
         >
-          Además del ebook, recibirás{" "}
-          <span className="text-terciary">GRATIS</span> estos 4 bonos
-          exclusivos:
-        </motion.h2>
+          <span className="inline-flex rounded-full bg-white/15 px-5 py-2 text-sm font-semibold text-secondary">
+            Bonos incluidos
+          </span>
+          <h2 className="mt-5 text-3xl font-bold leading-tight sm:text-4xl">
+            Además del ebook, recibes 6 bonos de apoyo pensados para acompañarte
+            en el proceso.
+          </h2>
+          <p className="mt-4 text-base leading-7 text-slate-100 sm:text-lg">
+            Cada recurso suma una herramienta concreta para organizarte mejor,
+            avanzar con más claridad y aplicar ideas simples desde tu realidad.
+          </p>
+        </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 text-slate-900">
-          {bonuses.map((bonus, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {BONUSES.map((bonus, index) => (
+            <motion.article
+              key={bonus.title}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="rounded-xl shadow-lg overflow-hidden flex flex-col"
+              transition={{ duration: 0.4, delay: index * 0.08 }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white shadow-2xl shadow-slate-950/10"
             >
-              <div className="w-full h-96 relative">
+              <div className="relative h-72 w-full bg-gradient-to-b from-white to-primary/40 p-4">
                 <Image
                   src={bonus.image}
-                  alt={bonus.title}
+                  alt={bonus.alt}
                   fill
-                  className="object-contain object-center"
+                  className="object-contain object-center p-4"
                 />
               </div>
-              <div className="p-5 text-center text-white">
-                <p className="text-base sm:text-lg font-medium">
-                  {bonus.icon} {bonus.title}
+
+              <div className="space-y-4 p-5 text-slate-800">
+                <div className="inline-flex rounded-full bg-primary px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-slate-700">
+                  {bonus.value}
+                </div>
+                <h3 className="text-xl font-bold leading-tight">{bonus.title}</h3>
+                <p className="text-sm leading-6 text-slate-600">
+                  {bonus.description}
+                </p>
+                <p className="rounded-2xl bg-slate-50 p-4 text-sm leading-6 text-slate-700">
+                  <span className="font-semibold text-slate-900">Sirve para:</span>{" "}
+                  {bonus.servesFor}
                 </p>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
-      </div>
-      <div className="flex justify-center z-10 relative mt-14">
-        <motion.a
-          href="https://pay.hotmart.com/A100587077F?checkoutMode=10&bid=1751909085221"
-          whileInView={{ y: [0, -40, 0, -20, 0, -10, 0] }}
-          transition={{
-            duration: 1.5,
-            ease: "easeOut",
-            times: [0, 0.2, 0.4, 0.6, 0.75, 0.9, 1],
-          }}
-          viewport={{ once: true }}
-          whileHover={{ scale: 1.05 }}
-          className="inline-block bg-gradient-to-b from-red-700 to-red-500 text-white text-center font-semibold md:text-lg xl:text-2xl px-6 py-3 rounded-full my-5 uppercase"
-        >
-          Quiero los libros + Bonos ahora.
-        </motion.a>
+
+        <div className="mt-12 flex flex-col items-center gap-3 text-center">
+          <p className="max-w-3xl text-sm leading-6 text-slate-100 sm:text-base">
+            Ebook + 6 bonos incluidos en una sola compra segura por Hotmart,
+            con acceso digital inmediato después del pago.
+          </p>
+          <motion.a
+            href={HOTMART_CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-red-700 to-red-500 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-red-900/20 sm:text-base"
+          >
+            Quiero los bonos y el ebook
+          </motion.a>
+        </div>
       </div>
     </section>
   );

@@ -1,40 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { ChevronDown } from "lucide-react";
-
-const faqs = [
-  {
-    question: "¿El libro es físico o digital?",
-    answer:
-      "El ebook emprendiendo con un hijo autista es digital y viene en formato PDF. Este puede ser descargado desde cualquier dispositivo, celular, computadora o tablet. No se encuentra en ninguna tienda física.",
-  },
-  {
-    question: "¿Cómo descargo el libro y los bonos después de haber comprado?",
-    answer:
-      "El primer paso es abrir el correo que llegó a tu bandeja de entrada proveniente de Hotmart (la plataforma que utilizamos para hacer entrega del material). En este correo se detalla paso a paso cómo descargar el libro. Son 3 simples pasos, de fácil entendimiento y ejecución.",
-  },
-  {
-    question: "¿Qué métodos de pago hay disponibles?",
-    answer: "Puedes pagar con Tarjeta de Débito, Crédito, PayPal.",
-  },
-  {
-    question: "¿Cómo es el proceso de compra?",
-    answer:
-      "Una vez realices el pago a través de la plataforma recibes un correo electrónico con los datos de acceso para descargar inmediatamente en tus dispositivos el Ebook «Emprendiendo con un hijo autista».",
-  },
-  {
-    question: "Si tengo algún inconveniente, ¿Dónde puedo escribir?",
-    answer:
-      "Puedes escribirnos al correo electrónico autismoconsentido@gmail.com y allí resolveremos tus dudas o preguntas que tengas con la compra del ebook a la mayor brevedad posible.",
-  },
-  {
-    question: "¿Es seguro pagar en línea?",
-    answer:
-      "Sí, utilizamos una plataforma de pago 100% segura llamada Hotmart. La cual es reconocida como una plataforma de educación y de pago a nivel mundial. Incluso puedes investigarla por tu cuenta. No almacenamos ninguna información de tu tarjeta de crédito y tu información personal está protegida.",
-  },
-];
+import { FAQS } from "../lib/landingData";
 
 const Questions = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -44,40 +13,70 @@ const Questions = () => {
   };
 
   return (
-    <section className="py-10 px-4 bg-[url('/assets/bg_white.jpeg')] bg-bottom bg-fixed bg-cover text-gray-800 relative">
-      <div className="absolute top-0 bg-white/10 w-full h-full" />
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 z-10 relative">
-        Preguntas frecuentes
-      </h2>
-      <div className="max-w-3xl mx-auto space-y-4 z-10 relative">
-        {faqs.map((item, i) => (
-          <div key={i} className="border-b pb-4">
-            <button
-              onClick={() => toggle(i)}
-              className="flex justify-between items-center w-full text-left text-lg font-semibold"
-            >
-              {item.question}
-              <ChevronDown
-                className={`transition-transform duration-300 ${
-                  activeIndex === i ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-            <AnimatePresence>
-              {activeIndex === i && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden mt-2 text-base text-gray-600 bg-white"
+    <section
+      id="faq"
+      className="relative bg-[url('/assets/bg_white.jpeg')] bg-cover bg-center bg-scroll px-4 py-16 text-gray-800 md:bg-fixed"
+    >
+      <div className="absolute inset-0 bg-white/20" />
+
+      <div className="relative z-10 mx-auto max-w-4xl">
+        <div className="mx-auto mb-10 max-w-3xl text-center">
+          <span className="inline-flex rounded-full bg-gradient-to-b from-secondary to-blue-700 px-5 py-2 text-sm font-semibold text-white shadow-md">
+            Preguntas frecuentes
+          </span>
+          <h2 className="mt-5 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
+            Respuestas claras antes de comprar.
+          </h2>
+          <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg">
+            Si quieres revisar detalles sobre acceso, pago o soporte, aquí tienes
+            la información principal de forma simple.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {FAQS.map((item, i) => {
+            const isOpen = activeIndex === i;
+
+            return (
+              <div
+                key={item.question}
+                className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+              >
+                <button
+                  type="button"
+                  onClick={() => toggle(i)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${i}`}
+                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-base font-semibold text-slate-900 sm:text-lg"
                 >
-                  <p>{item.answer}</p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        ))}
+                  <span>{item.question}</span>
+                  <ChevronDown
+                    className={`h-5 w-5 shrink-0 transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {isOpen ? (
+                    <motion.div
+                      id={`faq-answer-${i}`}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25 }}
+                      className="overflow-hidden border-t border-slate-100"
+                    >
+                      <div className="px-5 py-4 text-sm leading-7 text-slate-600 sm:text-base">
+                        {item.answer}
+                      </div>
+                    </motion.div>
+                  ) : null}
+                </AnimatePresence>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

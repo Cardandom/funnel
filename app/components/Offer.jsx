@@ -1,116 +1,109 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { motion } from "motion/react";
+import {
+  HOTMART_CHECKOUT_URL,
+  PRODUCT_NAME,
+  PRODUCT_PRICE,
+  TRUST_POINTS,
+} from "../lib/landingData";
 
 const Offer = () => {
   return (
-    <section className="w-full px-4 py-12 bg-gray-100 flex flex-col items-center text-center">
-      {/* Imagen centrada */}
-      <img
-        src="/assets/booksp.png"
-        alt="Oferta Especial"
-        className="w-64 h-auto mb-6"
-      />
+    <section
+      id="oferta"
+      className="relative bg-[url('/assets/bg_hero.webp')] bg-cover bg-center bg-scroll py-16 text-white md:bg-fixed"
+    >
+      <div className="absolute inset-0 bg-slate-800/70" />
 
-      {/* Títulos */}
-      <h1 className="text-3xl md:text-4xl font-bold text-blue-800 mb-2">
-        Transforma tu aprendizaje ahora
-      </h1>
-      <h2 className="text-2xl md:text-3xl font-semibold text-blue-500 mb-6">
-        Descubre el poder del conocimiento
-      </h2>
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.9fr_1.1fr]">
+        <motion.div
+          initial={{ opacity: 0, x: -24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.25 }}
+        >
+          <span className="inline-flex rounded-full bg-white/15 px-5 py-2 text-sm font-semibold text-secondary">
+            Oferta y confianza
+          </span>
 
-      {/* Botón principal */}
-      <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg mb-10">
-        Esto es lo que obtendrás hoy
-      </button>
+          <h2 className="mt-5 text-3xl font-bold leading-tight sm:text-4xl">
+            {PRODUCT_NAME} está pensado para ayudarte a empezar con claridad, sin
+            exageraciones.
+          </h2>
 
-      {/* Cuadro de bonos */}
-      <div className="w-full max-w-xl bg-white shadow-lg rounded-lg p-6 mb-8">
-        {[
-          {
-            plan: "LIBRO DIGITAL",
-            price: "$27.90",
-            desc: "Emprendiendo con un hijo autista",
-          },
-          {
-            plan: "Bono 1",
-            price: "$19.90",
-            desc: "Pictograma para casa y emociones",
-          },
-          {
-            plan: "Bono 2",
-            price: "$16.90",
-            desc: "Lista para emprender desde casa",
-          },
-          {
-            plan: "Bono 3",
-            price: "$15.90",
-            desc: "Audios y escritos de bienestar y meditación en tiempos dificiles",
-          },
-          {
-            plan: "Bono 4",
-            price: "$14.90",
-            desc: "Aprende WhatsApp Business para vender sin complicaciones",
-          },
-        ].map(({ plan, price, desc }, idx) => (
-          <div key={idx} className="border-b last:border-none pb-4 mb-4">
-            <div className="flex justify-between items-center text-left">
-              <span className="font-bold text-black uppercase">{plan}</span>
-              <span className="relative text-red-600 font-semibold">
-                {price}
-                <span className="absolute left-0 top-1/2 w-full h-[2px] bg-red-600 transform -translate-y-1/2"></span>
-              </span>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-100 sm:text-lg">
+            La compra es digital, se procesa en Hotmart y el acceso llega por
+            correo. Aquí tienes el resumen para que sepas exactamente qué estás
+            adquiriendo antes de comprar.
+          </p>
+
+          <div className="mt-7 rounded-[2rem] border border-white/10 bg-white/10 p-6 shadow-2xl shadow-slate-950/10 backdrop-blur">
+            <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">
+                  Precio especial de lanzamiento
+                </p>
+                <p className="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                  {PRODUCT_PRICE}
+                </p>
+              </div>
+              <div className="rounded-2xl bg-slate-900/50 px-4 py-3 text-right text-sm text-slate-100">
+                <p className="font-semibold text-white">Incluye</p>
+                <p>Ebook digital + 6 bonos</p>
+              </div>
             </div>
-            <p className="text-gray-700 font-semibold mt-1">{desc}</p>
+
+            <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-100 sm:text-base">
+              <li>Acceso digital inmediato después del pago.</li>
+              <li>Compra segura procesada por Hotmart.</li>
+              <li>Producto en español, pensado para leer a tu ritmo.</li>
+              <li>Soporte visible por correo para dudas de acceso.</li>
+              <li>Si Hotmart muestra una garantía para esta oferta, será la que aplique.</li>
+            </ul>
           </div>
-        ))}
 
-        <div className="flex justify-between font-bold text-lg mt-6">
-          <span>Total en valor:</span>
-          <span className="text-red-600">$95.50</span>
-        </div>
+          <motion.a
+            href={HOTMART_CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="mt-7 inline-flex items-center justify-center rounded-full bg-gradient-to-b from-secondary to-blue-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-blue-900/20 sm:text-base"
+          >
+            Empezar con la guía
+          </motion.a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.25 }}
+        >
+          <div className="rounded-[2rem] border border-white/10 bg-white p-4 shadow-2xl shadow-slate-950/10">
+            <Image
+              src="/assets/booksp.png"
+              alt={`Portada de ${PRODUCT_NAME}`}
+              width={1100}
+              height={1100}
+              className="h-auto w-full rounded-[1.5rem] object-contain"
+            />
+          </div>
+
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            {TRUST_POINTS.map((point) => (
+              <div
+                key={point}
+                className="rounded-2xl border border-white/10 bg-white/10 p-4 text-sm leading-6 text-slate-100 backdrop-blur"
+              >
+                {point}
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
-
-      {/* Texto de oferta especial */}
-      <p className="max-w-2/3 text-xl md:text-3xl text-gray-700 my-10 font-semibold">
-        El valor real del{" "}
-        <span className="text-green-600 font-bold">EBOOK MÁS LOS BONOS</span>{" "}
-        supera los <span className="text-green-600 font-bold">$80 USD</span>,
-        pero puedes obtener hoy{" "}
-        <span className="text-red-600 font-bold">SIN COSTO ADICIONAL</span> el
-        Ebook + LOS BONOS como parte de esta oferta especial{" "}
-        <span className="text-green-600 font-bold">DE HOY</span>
-      </p>
-
-      {/* Precio final */}
-      <div className="text-center mb-8">
-        <p className="text-2xl md:text-3xl font-bold text-green-600 line-through">
-          Antes $95.50
-        </p>
-        <p className="text-4xl md:text-5xl font-extrabold text-red-600">
-          HOY $10.90
-        </p>
-      </div>
-
-      {/* Botón final */}
-      <motion.a
-        href="https://pay.hotmart.com/A100587077F?checkoutMode=10&bid=1751909085221"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-green-500 uppercase hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg md:text-xl cursor-pointer inline-block"
-        initial={{ y: 0 }}
-        whileInView={{ y: [0, -40, 0, -20, 0, -10, 0] }}
-        transition={{
-          duration: 1.5,
-          ease: "easeOut",
-          times: [0, 0.2, 0.4, 0.6, 0.75, 0.9, 1],
-        }}
-        viewport={{ once: true }}
-        whileHover={{ scale: 1.05 }}
-      >
-        Toca aquí y accede al método ya mismo
-      </motion.a>
     </section>
   );
 };
