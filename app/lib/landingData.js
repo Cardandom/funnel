@@ -6,7 +6,7 @@ export const SUPPORT_EMAIL = "autismoconsentido@gmail.com";
 export const PRODUCT_NAME = "Pack Digital Emprendiendo con un Hijo Autista";
 export const MAIN_EBOOK_TITLE = "Emprendiendo con un Hijo Autista";
 export const PRODUCT_TYPE = "pack digital";
-export const PRODUCT_PRICE = "$10.90 USD";
+export const PRODUCT_PRICE = "$15.50 USD";
 
 export const HERO_BADGES = [
   "Ebook principal",
