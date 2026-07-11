@@ -3,7 +3,8 @@ import { SUPPORT_EMAIL } from "../lib/landingData";
 
 export const metadata = {
   title: "Términos y condiciones",
-  description: "Condiciones básicas de uso y compra de la guía digital Emprendiendo con un hijo Autista.",
+  description:
+    "Condiciones básicas de uso y compra del Pack Digital Emprendiendo con un Hijo Autista.",
 };
 
 export default function TermsPage() {
@@ -17,9 +18,11 @@ export default function TermsPage() {
           Términos y condiciones
         </h1>
         <p className="mt-4 text-base leading-7 text-slate-700">
-          La compra de este producto corresponde a un ebook digital y los bonos
-          descritos en la landing. El acceso y la entrega se realizan de manera
-          digital a través de Hotmart.
+          La compra principal corresponde al Pack Digital Emprendiendo con un
+          Hijo Autista y los recursos incluidos descritos en la landing. El
+          acceso y la entrega se realizan de manera digital a través de Hotmart.
+          Durante el checkout podrías agregar productos adicionales opcionales
+          si decides complementar tu compra.
         </p>
         <p className="mt-4 text-base leading-7 text-slate-700">
           El contenido se ofrece con fines informativos y de organización

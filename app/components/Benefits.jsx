@@ -17,14 +17,15 @@ export default function BenefitsSection() {
           className="mx-auto mb-10 max-w-3xl text-center"
         >
           <span className="inline-flex rounded-full bg-gradient-to-b from-secondary to-blue-700 px-5 py-2 text-sm font-semibold text-white shadow-md">
-            Qué vas a lograr con esta guía
+            Qué vas a lograr con este Pack
           </span>
           <h2 className="mt-5 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
             Beneficios reales, sin promesas exageradas.
           </h2>
           <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg">
             El objetivo no es que hagas todo perfecto. Es ayudarte a avanzar con
-            una ruta clara, práctica y más amable con tu realidad.
+            una ruta clara, recursos prácticos y una organización más amable con
+            tu realidad.
           </p>
         </motion.div>
 

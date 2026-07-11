@@ -3,7 +3,8 @@ import { SUPPORT_EMAIL } from "../lib/landingData";
 
 export const metadata = {
   title: "Contacto",
-  description: "Página de contacto y soporte para la guía digital Emprendiendo con un hijo Autista.",
+  description:
+    "Página de contacto y soporte para el Pack Digital Emprendiendo con un Hijo Autista.",
 };
 
 export default function ContactPage() {
@@ -17,8 +18,9 @@ export default function ContactPage() {
           Contacto
         </h1>
         <p className="mt-4 text-base leading-7 text-slate-700">
-          Si tienes dudas sobre tu compra, acceso al ebook o los bonos,
-          escríbenos y te ayudaremos a revisar tu solicitud.
+          Si tienes dudas sobre tu compra, acceso al Pack Digital o los
+          productos adicionales opcionales, escríbenos y te ayudaremos a revisar
+          tu solicitud.
         </p>
         <div className="mt-6 rounded-[1.5rem] bg-slate-50 p-6">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">

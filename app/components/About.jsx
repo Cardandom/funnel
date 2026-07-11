@@ -23,7 +23,7 @@ export default function AboutSection() {
           <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[2rem] bg-white/10 p-4 shadow-2xl backdrop-blur">
             <Image
               src="/assets/booksp.png"
-              alt="Portada del ebook Emprendiendo con un hijo Autista"
+              alt="Ebook principal del Pack Digital Emprendiendo con un Hijo Autista"
               width={1200}
               height={1200}
               className="h-auto w-full rounded-[1.5rem] object-contain"
@@ -33,7 +33,7 @@ export default function AboutSection() {
 
         <div className="order-1 lg:order-2">
           <span className="inline-flex rounded-full bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
-            ¿Para quién es esta guía?
+            ¿Para quién es este Pack?
           </span>
 
           <h2 className="mt-5 text-3xl font-bold leading-tight sm:text-4xl">
@@ -42,9 +42,10 @@ export default function AboutSection() {
           </h2>
 
           <p className="mt-4 max-w-2xl text-base leading-7 text-slate-100 sm:text-lg">
-            Esta guía nació para acompañar a mujeres que necesitan una ruta
-            simple, humana y realista para empezar desde casa. No busca presionarte
-            a hacerlo todo, sino ayudarte a dar un primer paso posible.
+            Este Pack nació para acompañar a mujeres que necesitan una ruta
+            simple, humana y realista para empezar desde casa. No busca
+            presionarte a hacerlo todo, sino ayudarte a dar un primer paso
+            posible con recursos prácticos para tu realidad.
           </p>
 
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
@@ -62,7 +63,7 @@ export default function AboutSection() {
 
           <p className="mt-6 max-w-2xl text-sm leading-6 text-slate-200 sm:text-base">
             Si estás buscando una forma de empezar con pasos simples, sin sentir
-            que debes tenerlo todo resuelto desde el principio, este ebook fue
+            que debes tenerlo todo resuelto desde el principio, este Pack fue
             creado para acompañarte.
           </p>
         </div>

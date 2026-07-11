@@ -15,23 +15,26 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Emprendiendo con un hijo Autista | Ebook para madres cuidadoras",
-    template: "%s | Emprendiendo con un hijo Autista",
+    default:
+      "Pack Digital Emprendiendo con un Hijo Autista | Recursos para autismo",
+    template: "%s | Pack Digital Emprendiendo con un Hijo Autista",
   },
   description:
-    "Guía digital para madres cuidadoras que desean emprender desde casa, organizar su tiempo y empezar paso a paso con herramientas prácticas.",
+    "Pack digital para madres cuidadoras y familias con autismo: ebook principal, planificador de rutinas, pictogramas y recursos para emprender desde casa.",
   openGraph: {
-    title: "Emprendiendo con un hijo Autista | Ebook para madres cuidadoras",
+    title:
+      "Pack Digital Emprendiendo con un Hijo Autista | Recursos para autismo",
     description:
-      "Guía digital para madres cuidadoras que desean emprender desde casa, organizar su tiempo y empezar paso a paso con herramientas prácticas.",
+      "Recibe el ebook principal, Lista para Emprender desde Casa, Planificador Semanal y Pictogramas para Casa y Emociones en un solo Pack Digital.",
     type: "website",
     locale: "es_CO",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emprendiendo con un hijo Autista | Ebook para madres cuidadoras",
+    title:
+      "Pack Digital Emprendiendo con un Hijo Autista | Recursos para autismo",
     description:
-      "Guía digital para madres cuidadoras que desean emprender desde casa, organizar su tiempo y empezar paso a paso con herramientas prácticas.",
+      "Guía para padres y madres cuidadoras con recursos para autismo, rutinas, pictogramas y emprendimiento desde casa.",
   },
 };
 

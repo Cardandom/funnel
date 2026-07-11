@@ -11,13 +11,13 @@ import {
 } from "../lib/landingData";
 
 export default function Hero({
-  title = `Emprende desde casa mientras acompañas a tu hijo dentro del espectro autista`,
-  subtitle = `${PRODUCT_NAME} es un ebook digital para madres cuidadoras que quieren organizar sus ideas, recuperar confianza y empezar un emprendimiento realista sin abandonar el cuidado de su familia.`,
+  title = PRODUCT_NAME,
+  subtitle = "Una guía práctica acompañada de recursos incluidos para ayudarte a comprender mejor el autismo, organizar las rutinas de tu hijo y comenzar un emprendimiento desde casa.",
   price = PRODUCT_PRICE,
-  ctaLabel = "Quiero acceder al ebook",
+  ctaLabel = "Quiero acceder al Pack Digital",
   ctaHref = HOTMART_CHECKOUT_URL,
   imageSrc = "/assets/booksp.png",
-  imageAlt = `Portada de ${PRODUCT_NAME}`,
+  imageAlt = `Portada del ebook principal de ${PRODUCT_NAME}`,
   badges = HERO_BADGES,
 }) {
   return (
@@ -44,7 +44,7 @@ export default function Hero({
           </p>
 
           <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-slate-600">
-            Incluye el ebook digital + 6 bonos de apoyo
+            El Pack incluye 4 recursos digitales principales
           </p>
 
           <div className="mt-6 flex flex-wrap justify-center gap-3 lg:justify-start">
