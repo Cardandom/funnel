@@ -17,11 +17,11 @@ export default function CallToActionSection() {
           Último paso
         </span>
         <h2 className="mt-5 text-3xl font-bold leading-tight sm:text-4xl">
-          Si este ebook encaja con tu momento, puedes empezar cuando decidas.
+          Si este Pack encaja con tu momento, puedes empezar cuando decidas.
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-7 text-slate-100 sm:text-lg">
-          Accede a una guía digital en español, con compra segura por Hotmart y
-          acceso inmediato después del pago.
+          Accede al Pack Digital en español, con compra segura por Hotmart y
+          entrega inmediata de los recursos incluidos después del pago.
         </p>
 
         <motion.a
@@ -32,7 +32,7 @@ export default function CallToActionSection() {
           whileTap={{ scale: 0.98 }}
           className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-bold uppercase tracking-wide text-blue-700 shadow-lg shadow-black/10 sm:text-base"
         >
-          Quiero acceder al ebook
+          Quiero acceder al Pack Digital
         </motion.a>
       </motion.div>
     </section>

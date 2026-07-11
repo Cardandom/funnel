@@ -6,7 +6,7 @@ import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
 import Diagnostic from "./components/Diagnostic";
 import Solution from "./components/Solution";
-import Bonos from "./components/Bonos";
+import PackResources from "./components/PackResources";
 import Offer from "./components/Offer";
 import Questions from "./components/Questions";
 import {
@@ -19,17 +19,17 @@ export default function Page() {
   return (
     <>
       <Hero
-        title="Emprende desde casa a tu ritmo mientras acompañas a tu hijo dentro del espectro autista"
-        subtitle={`${PRODUCT_NAME} es un ebook digital para madres cuidadoras que quieren organizar sus ideas, recuperar confianza y empezar un emprendimiento realista sin abandonar el cuidado de su familia.`}
+        title={PRODUCT_NAME}
+        subtitle="Una guía práctica acompañada de recursos incluidos para ayudarte a comprender mejor el autismo, organizar las rutinas de tu hijo y comenzar un emprendimiento desde casa."
         price={PRODUCT_PRICE}
-        ctaLabel="Quiero acceder al ebook"
+        ctaLabel="Quiero acceder al Pack Digital"
         ctaHref={HOTMART_CHECKOUT_URL}
       />
       <About />
       <Diagnostic />
       <Solution />
       <Benefits />
-      <Bonos />
+      <PackResources />
       <Testimonials />
       <Offer />
       <Questions />

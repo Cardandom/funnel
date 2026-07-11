@@ -21,7 +21,7 @@ const Solution = () => {
           viewport={{ once: true, amount: 0.25 }}
         >
           <span className="inline-flex rounded-full bg-white/15 px-5 py-2 text-sm font-semibold text-secondary">
-            Qué encontrarás dentro del ebook
+            Qué encontrarás dentro del Pack
           </span>
 
           <h2 className="mt-5 text-3xl font-bold leading-tight sm:text-4xl">
@@ -30,8 +30,8 @@ const Solution = () => {
           </h2>
 
           <p className="mt-4 max-w-2xl text-base leading-7 text-slate-100 sm:text-lg">
-            No es teoría para guardar en una carpeta. Es una guía pensada para
-            acompañarte con pasos simples, a tu ritmo y con herramientas que sí
+            No es material para guardar en una carpeta. Es una guía principal
+            acompañada de recursos para autismo, rutinas y emprendimiento que sí
             puedas usar desde casa.
           </p>
 
@@ -54,7 +54,7 @@ const Solution = () => {
             whileTap={{ scale: 0.98 }}
             className="mt-7 inline-flex items-center justify-center rounded-full bg-gradient-to-b from-red-700 to-red-500 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-red-900/20 sm:text-base"
           >
-            Empezar con la guía
+            Empezar con el Pack
           </motion.a>
         </motion.div>
 
@@ -68,10 +68,10 @@ const Solution = () => {
           <div className="absolute inset-0 rounded-[2rem] bg-secondary/20 blur-3xl" />
           <Image
             src="/assets/booksp.png"
-            alt={`Portada de ${PRODUCT_NAME}`}
-            width={1000}
-            height={1000}
-            className="relative mx-auto h-auto w-full max-w-md rounded-[2rem] shadow-2xl"
+            alt={`Ebook principal incluido en ${PRODUCT_NAME}`}
+            width={1200}
+            height={1600}
+            className="relative mx-auto h-auto w-full max-w-xl rounded-[2rem] shadow-2xl"
           />
         </motion.div>
       </div>

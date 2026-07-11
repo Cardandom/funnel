@@ -8,8 +8,8 @@ export default function FooterSection() {
         <div className="space-y-2 text-sm text-slate-300">
           <p className="font-semibold text-white">Autismo con Sentido</p>
           <p>
-            Ebook digital para madres cuidadoras que desean emprender desde
-            casa con una guía práctica y empática.
+            Pack digital para madres cuidadoras que desean emprender desde casa
+            con una guía práctica y recursos para autismo.
           </p>
           <p>Soporte: <a className="text-secondary underline-offset-4 hover:underline" href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a></p>
         </div>
